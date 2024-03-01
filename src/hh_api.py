@@ -14,6 +14,7 @@ class HeadHunterAPI(GetVacancies):
             'per_page': 100,  # количество вакансий
             'area': '113'  # Регион. Необходимо передавать id из справочника /areas.
         }
+
     def get_vacancies(self, name_job, pages):
         hh_list = []
         for i in range(pages):
