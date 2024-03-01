@@ -1,5 +1,5 @@
 from src.hh_api import HeadHunterAPI
-from src.jsn import JSONCSaver
+from src.json_saver import JSONSaver
 
 
 def user_choice_hh():
@@ -16,7 +16,7 @@ def user_choice_hh():
     if user_answer not in ['да']:
         print('Спасибо за использование программы')
     else:
-        jsonfile_hh = JSONCSaver()
+        jsonfile_hh = JSONSaver()
         jsonfile_hh.add_vacancies(from_hh)
         jsonfile_hh.sort_vacancies_by_salary()
         jsonfile_hh.file_writer()

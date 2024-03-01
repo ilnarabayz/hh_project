@@ -3,7 +3,7 @@ from src.vacancy import Vacancy, Vacancies
 from src.abstracted import JSONABCSaver
 
 
-class JSONCSaver(Vacancies, JSONABCSaver):
+class JSONSaver(Vacancies, JSONABCSaver):
     """
     Запись и чтение json
     """

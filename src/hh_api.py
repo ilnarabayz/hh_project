@@ -5,6 +5,15 @@ from src.abstracted import GetVacancies
 
 class HeadHunterAPI(GetVacancies):
     """ Класс для подключения к сайту hh.ru"""
+
+    def init(self, name):
+        self.__url = 'https://api.hh.ru/vacancies'
+        self.__name = name
+        self.__params = {
+            'text': self.__name,
+            'per_page': 100,  # количество вакансий
+            'area': '113'  # Регион. Необходимо передавать id из справочника /areas.
+        }
     def get_vacancies(self, name_job, pages):
         hh_list = []
         for i in range(pages):
